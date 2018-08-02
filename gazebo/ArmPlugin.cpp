@@ -16,7 +16,7 @@
 #define JOINT_MAX	 2.0f
 
 // Turn on velocity based control
-#define VELOCITY_CONTROL false // 80% false : 90% true
+#define VELOCITY_CONTROL false 
 #define VELOCITY_MIN -0.2f
 #define VELOCITY_MAX  0.2f
 
@@ -62,6 +62,7 @@
 #define COLLISION_ITEM   "tube::tube_link::tube_collision"
 #define COLLISION_POINT  "arm::gripperbase::gripper_link"
 #define COLLISION_ARM    "arm::link2::collision2"
+#define COLLISION_MIDDLE "arm::gripper_middle::middle_collision"
 
 // Animation Steps
 #define ANIMATION_STEPS 1000
@@ -269,13 +270,15 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		/
 		*/
 		//[90%]
-		//bool collisionCheck = ((strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0) || (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_ARM) == 0)) ? true : false;
+		//bool collisionCheck = ((strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0) || (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_ARM) == 0) || (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0) || (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_MIDDLE) == 0)) ? true : false;
 		//[80%]
 		bool collisionCheck = (strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0) ? true : false;
 		
+		//printf(" %s \n", contacts->contact(i).collision2().c_str());
+
 		if (collisionCheck)
 		{
-			rewardHistory = REWARD_WIN * 100; // REWARD_WIN * 10 [90%] : REWARD_WIN * 100 [80%];
+			rewardHistory = REWARD_WIN * 10;
 			newReward  = true;
 			endEpisode = true;
 			return;
@@ -328,7 +331,7 @@ bool ArmPlugin::updateAgent()
 	
 	// TODO - Set joint velocity based on whether action is even or odd. // [Task #3]
 	// float velocity = (action % 2 == 0) ? vel[action/2] + actionVelDelta : vel[action/2] - actionVelDelta;
-	
+	/*
 	float velocity = 0.0; 
 	
 	if( velocity < VELOCITY_MIN )
@@ -353,7 +356,7 @@ bool ArmPlugin::updateAgent()
 			ref[n] = JOINT_MAX;
 			vel[n] = 0.0f;
 		}
-	}
+	}*/
 #else
 	
 	/*
@@ -366,10 +369,10 @@ bool ArmPlugin::updateAgent()
 	//float joint = 0.0;
 	
 	// limit the joint to the specified range
-	if( joint < JOINT_MIN )
+	if( joint <= JOINT_MIN )
 		joint = JOINT_MIN;
 	
-	if( joint > JOINT_MAX )
+	if( joint >= JOINT_MAX )
 		joint = JOINT_MAX;
 
 	ref[action/2] = joint;
@@ -580,7 +583,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 
 		// get the bounding box for the gripper		
 		const math::Box& gripBBox = gripper->GetBoundingBox();
-		const float groundContact = 0.05f;
+		const float groundContact = 0.01f;
 		
 		/*
 		/ TODO - set appropriate Reward for robot hitting the ground. [Task #4]
@@ -615,7 +618,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 			if( episodeFrames > 1 )
 			{
 				const float distDelta = lastGoalDistance - distGoal;
-				const float alpha = 0.1f; // alpha = 0.1f [80%] : 0.2f [90%]
+				const float alpha = 0.1f;
 
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta  = (avgGoalDelta * alpha) + (distDelta * (1.0f - alpha));

@@ -1,0 +1,283 @@
+nvidia@tegra-ubuntu:~/workspaceROS/RoboND-DeepRL-Project/build/aarch64/bin$ ./gazebo-arm.sh 
+ 
+starting gazebo7 simulator
+Gazebo multi-robot simulator, version 7.0.0
+Copyright (C) 2012-2016 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+[Msg] Waiting for master.
+[Msg] Connected to gazebo master @ http://127.0.0.1:11345
+[Msg] Publicized address: 10.0.0.140
+Gazebo multi-robot simulator, version 7.0.0
+Copyright (C) 2012-2016 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+[Msg] Waiting for master.
+[Msg] Connected to gazebo master @ http://127.0.0.1:11345
+[Msg] Publicized address: 10.0.0.140
+ArmPlugin::ArmPlugin()
+ArmPlugin::Load('arm')
+PropPlugin::Load('tube')
+[Err] [Scene.cc:2927] Light [sun] not found. Use topic ~/factory/light to spawn a new light.
+[Err] [Scene.cc:2927] Light [sun] not found. Use topic ~/factory/light to spawn a new light.
+
+[deepRL]  use_cuda:       True
+[deepRL]  use_lstm:       1
+[deepRL]  lstm_size:      256
+[deepRL]  input_width:    64
+[deepRL]  input_height:   64
+[deepRL]  input_channels: 3
+[deepRL]  num_actions:    6
+[deepRL]  optimizer:      RMSprop
+[deepRL]  learning rate:  0.15
+[deepRL]  replay_memory:  10000
+[deepRL]  batch_size:     32
+[deepRL]  gamma:          0.9
+[deepRL]  epsilon_start:  0.8
+[deepRL]  epsilon_end:    0.01
+[deepRL]  epsilon_decay:  300.0
+[deepRL]  allow_random:   1
+[deepRL]  debug_mode:     0
+[deepRL]  creating DQN model instance
+[deepRL]  DRQN::__init__()
+[deepRL]  LSTM (hx, cx) size = 256
+[deepRL]  DQN model instance created
+[deepRL]  DQN script done init
+[cuda]  cudaAllocMapped 49152 bytes, CPU 0x101340000 GPU 0x101340000
+[deepRL]  pyTorch THCState  0x40F55D30
+[cuda]  cudaAllocMapped 12288 bytes, CPU 0x101540000 GPU 0x101540000
+ArmPlugin - allocated camera img buffer 64x64  24 bpp  12288 bytes
+[deepRL]  nn.Conv2d() output size = 800
+
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.0000 (000 of 001)  (reward=-1.00 LOSS)
+Current Accuracy:  0.0000 (000 of 002)  (reward=-20.00 LOSS)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.0000 (000 of 003)  (reward=-1.00 LOSS)
+Current Accuracy:  0.2500 (001 of 004)  (reward=+10.00 WIN)
+Current Accuracy:  0.4000 (002 of 005)  (reward=+10.00 WIN)
+Current Accuracy:  0.3333 (002 of 006)  (reward=-20.00 LOSS)
+Current Accuracy:  0.2857 (002 of 007)  (reward=-20.00 LOSS)
+Current Accuracy:  0.2500 (002 of 008)  (reward=-20.00 LOSS)
+Current Accuracy:  0.2222 (002 of 009)  (reward=-20.00 LOSS)
+Current Accuracy:  0.3000 (003 of 010)  (reward=+10.00 WIN)
+Current Accuracy:  0.3636 (004 of 011)  (reward=+10.00 WIN)
+Current Accuracy:  0.4167 (005 of 012)  (reward=+10.00 WIN)
+Current Accuracy:  0.4615 (006 of 013)  (reward=+10.00 WIN)
+Current Accuracy:  0.5000 (007 of 014)  (reward=+10.00 WIN)
+Current Accuracy:  0.5333 (008 of 015)  (reward=+10.00 WIN)
+Current Accuracy:  0.5625 (009 of 016)  (reward=+10.00 WIN)
+Current Accuracy:  0.5882 (010 of 017)  (reward=+10.00 WIN)
+Current Accuracy:  0.6111 (011 of 018)  (reward=+10.00 WIN)
+Current Accuracy:  0.6316 (012 of 019)  (reward=+10.00 WIN)
+Current Accuracy:  0.6500 (013 of 020)  (reward=+10.00 WIN)
+Current Accuracy:  0.6667 (014 of 021)  (reward=+10.00 WIN)
+Current Accuracy:  0.6818 (015 of 022)  (reward=+10.00 WIN)
+Current Accuracy:  0.6957 (016 of 023)  (reward=+10.00 WIN)
+Current Accuracy:  0.7083 (017 of 024)  (reward=+10.00 WIN)
+Current Accuracy:  0.7200 (018 of 025)  (reward=+10.00 WIN)
+Current Accuracy:  0.7308 (019 of 026)  (reward=+10.00 WIN)
+Current Accuracy:  0.7407 (020 of 027)  (reward=+10.00 WIN)
+Current Accuracy:  0.7500 (021 of 028)  (reward=+10.00 WIN)
+Current Accuracy:  0.7586 (022 of 029)  (reward=+10.00 WIN)
+Current Accuracy:  0.7667 (023 of 030)  (reward=+10.00 WIN)
+Current Accuracy:  0.7742 (024 of 031)  (reward=+10.00 WIN)
+Current Accuracy:  0.7812 (025 of 032)  (reward=+10.00 WIN)
+Current Accuracy:  0.7879 (026 of 033)  (reward=+10.00 WIN)
+Current Accuracy:  0.7941 (027 of 034)  (reward=+10.00 WIN)
+Current Accuracy:  0.8000 (028 of 035)  (reward=+10.00 WIN) <----------------------------- Goal STAR
+Current Accuracy:  0.8056 (029 of 036)  (reward=+10.00 WIN)
+Current Accuracy:  0.8108 (030 of 037)  (reward=+10.00 WIN)
+Current Accuracy:  0.8158 (031 of 038)  (reward=+10.00 WIN)
+Current Accuracy:  0.8205 (032 of 039)  (reward=+10.00 WIN)
+Current Accuracy:  0.8250 (033 of 040)  (reward=+10.00 WIN)
+Current Accuracy:  0.8293 (034 of 041)  (reward=+10.00 WIN)
+Current Accuracy:  0.8333 (035 of 042)  (reward=+10.00 WIN)
+Current Accuracy:  0.8372 (036 of 043)  (reward=+10.00 WIN)
+Current Accuracy:  0.8409 (037 of 044)  (reward=+10.00 WIN)
+Current Accuracy:  0.8444 (038 of 045)  (reward=+10.00 WIN)
+Current Accuracy:  0.8478 (039 of 046)  (reward=+10.00 WIN)
+Current Accuracy:  0.8511 (040 of 047)  (reward=+10.00 WIN)
+Current Accuracy:  0.8542 (041 of 048)  (reward=+10.00 WIN)
+Current Accuracy:  0.8571 (042 of 049)  (reward=+10.00 WIN)
+Current Accuracy:  0.8600 (043 of 050)  (reward=+10.00 WIN)
+Current Accuracy:  0.8627 (044 of 051)  (reward=+10.00 WIN)
+Current Accuracy:  0.8654 (045 of 052)  (reward=+10.00 WIN)
+Current Accuracy:  0.8679 (046 of 053)  (reward=+10.00 WIN)
+Current Accuracy:  0.8704 (047 of 054)  (reward=+10.00 WIN)
+Current Accuracy:  0.8727 (048 of 055)  (reward=+10.00 WIN)
+Current Accuracy:  0.8750 (049 of 056)  (reward=+10.00 WIN)
+Current Accuracy:  0.8772 (050 of 057)  (reward=+10.00 WIN)
+Current Accuracy:  0.8793 (051 of 058)  (reward=+10.00 WIN)
+Current Accuracy:  0.8644 (051 of 059)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8667 (052 of 060)  (reward=+10.00 WIN)
+Current Accuracy:  0.8689 (053 of 061)  (reward=+10.00 WIN)
+Current Accuracy:  0.8710 (054 of 062)  (reward=+10.00 WIN)
+Current Accuracy:  0.8730 (055 of 063)  (reward=+10.00 WIN)
+Current Accuracy:  0.8750 (056 of 064)  (reward=+10.00 WIN)
+Current Accuracy:  0.8615 (056 of 065)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8485 (056 of 066)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8358 (056 of 067)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8235 (056 of 068)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8261 (057 of 069)  (reward=+10.00 WIN)
+Current Accuracy:  0.8286 (058 of 070)  (reward=+10.00 WIN)
+Current Accuracy:  0.8310 (059 of 071)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8194 (059 of 072)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8219 (060 of 073)  (reward=+10.00 WIN)
+Current Accuracy:  0.8243 (061 of 074)  (reward=+10.00 WIN)
+Current Accuracy:  0.8267 (062 of 075)  (reward=+10.00 WIN)
+Current Accuracy:  0.8158 (062 of 076)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8182 (063 of 077)  (reward=+10.00 WIN)
+Current Accuracy:  0.8205 (064 of 078)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8101 (064 of 079)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8000 (064 of 080)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8025 (065 of 081)  (reward=+10.00 WIN)
+Current Accuracy:  0.8049 (066 of 082)  (reward=+10.00 WIN)
+Current Accuracy:  0.8072 (067 of 083)  (reward=+10.00 WIN)
+Current Accuracy:  0.8095 (068 of 084)  (reward=+10.00 WIN)
+Current Accuracy:  0.8118 (069 of 085)  (reward=+10.00 WIN)
+Current Accuracy:  0.8140 (070 of 086)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8046 (070 of 087)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8068 (071 of 088)  (reward=+10.00 WIN)
+Current Accuracy:  0.8090 (072 of 089)  (reward=+10.00 WIN)
+Current Accuracy:  0.8111 (073 of 090)  (reward=+10.00 WIN)
+Current Accuracy:  0.8132 (074 of 091)  (reward=+10.00 WIN)
+Current Accuracy:  0.8152 (075 of 092)  (reward=+10.00 WIN)
+Current Accuracy:  0.8065 (075 of 093)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8085 (076 of 094)  (reward=+10.00 WIN)
+Current Accuracy:  0.8105 (077 of 095)  (reward=+10.00 WIN)
+Current Accuracy:  0.8021 (077 of 096)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8041 (078 of 097)  (reward=+10.00 WIN)
+Current Accuracy:  0.8061 (079 of 098)  (reward=+10.00 WIN)
+Current Accuracy:  0.8081 (080 of 099)  (reward=+10.00 WIN)
+Current Accuracy:  0.8100 (081 of 100)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8020 (081 of 101)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8039 (082 of 102)  (reward=+10.00 WIN)
+Current Accuracy:  0.8058 (083 of 103)  (reward=+10.00 WIN)
+Current Accuracy:  0.8077 (084 of 104)  (reward=+10.00 WIN)
+Current Accuracy:  0.8095 (085 of 105)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8019 (085 of 106)  (reward=-1.00 LOSS)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.7944 (085 of 107)  (reward=-1.00 LOSS)
+Current Accuracy:  0.7963 (086 of 108)  (reward=+10.00 WIN)
+Current Accuracy:  0.7982 (087 of 109)  (reward=+10.00 WIN)
+Current Accuracy:  0.8000 (088 of 110)  (reward=+10.00 WIN)
+Current Accuracy:  0.8018 (089 of 111)  (reward=+10.00 WIN)
+Current Accuracy:  0.8036 (090 of 112)  (reward=+10.00 WIN)
+Current Accuracy:  0.8053 (091 of 113)  (reward=+10.00 WIN)
+Current Accuracy:  0.8070 (092 of 114)  (reward=+10.00 WIN)
+Current Accuracy:  0.8087 (093 of 115)  (reward=+10.00 WIN)
+Current Accuracy:  0.8103 (094 of 116)  (reward=+10.00 WIN)
+Current Accuracy:  0.8120 (095 of 117)  (reward=+10.00 WIN)
+Current Accuracy:  0.8136 (096 of 118)  (reward=+10.00 WIN)
+Current Accuracy:  0.8151 (097 of 119)  (reward=+10.00 WIN)
+Current Accuracy:  0.8167 (098 of 120)  (reward=+10.00 WIN)
+Current Accuracy:  0.8099 (098 of 121)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8115 (099 of 122)  (reward=+10.00 WIN)
+Current Accuracy:  0.8130 (100 of 123)  (reward=+10.00 WIN)
+Current Accuracy:  0.8145 (101 of 124)  (reward=+10.00 WIN)
+Current Accuracy:  0.8160 (102 of 125)  (reward=+10.00 WIN)
+Current Accuracy:  0.8175 (103 of 126)  (reward=+10.00 WIN)
+Current Accuracy:  0.8189 (104 of 127)  (reward=+10.00 WIN)
+Current Accuracy:  0.8203 (105 of 128)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8140 (105 of 129)  (reward=-1.00 LOSS)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8077 (105 of 130)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8092 (106 of 131)  (reward=+10.00 WIN)
+Current Accuracy:  0.8106 (107 of 132)  (reward=+10.00 WIN)
+Current Accuracy:  0.8120 (108 of 133)  (reward=+10.00 WIN)
+Current Accuracy:  0.8134 (109 of 134)  (reward=+10.00 WIN)
+Current Accuracy:  0.8148 (110 of 135)  (reward=+10.00 WIN)
+Current Accuracy:  0.8162 (111 of 136)  (reward=+10.00 WIN)
+Current Accuracy:  0.8175 (112 of 137)  (reward=+10.00 WIN)
+Current Accuracy:  0.8188 (113 of 138)  (reward=+10.00 WIN)
+Current Accuracy:  0.8201 (114 of 139)  (reward=+10.00 WIN)
+Current Accuracy:  0.8214 (115 of 140)  (reward=+10.00 WIN)
+Current Accuracy:  0.8227 (116 of 141)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8169 (116 of 142)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8182 (117 of 143)  (reward=+10.00 WIN)
+Current Accuracy:  0.8194 (118 of 144)  (reward=+10.00 WIN)
+Current Accuracy:  0.8207 (119 of 145)  (reward=+10.00 WIN)
+Current Accuracy:  0.8219 (120 of 146)  (reward=+10.00 WIN)
+Current Accuracy:  0.8231 (121 of 147)  (reward=+10.00 WIN)
+Current Accuracy:  0.8243 (122 of 148)  (reward=+10.00 WIN)
+Current Accuracy:  0.8255 (123 of 149)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8200 (123 of 150)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8146 (123 of 151)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8158 (124 of 152)  (reward=+10.00 WIN)
+Current Accuracy:  0.8170 (125 of 153)  (reward=+10.00 WIN)
+Current Accuracy:  0.8182 (126 of 154)  (reward=+10.00 WIN)
+Current Accuracy:  0.8194 (127 of 155)  (reward=+10.00 WIN)
+Current Accuracy:  0.8205 (128 of 156)  (reward=+10.00 WIN)
+Current Accuracy:  0.8217 (129 of 157)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8165 (129 of 158)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8176 (130 of 159)  (reward=+10.00 WIN)
+Current Accuracy:  0.8188 (131 of 160)  (reward=+10.00 WIN)
+Current Accuracy:  0.8199 (132 of 161)  (reward=+10.00 WIN)
+Current Accuracy:  0.8210 (133 of 162)  (reward=+10.00 WIN)
+Current Accuracy:  0.8221 (134 of 163)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8171 (134 of 164)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8182 (135 of 165)  (reward=+10.00 WIN)
+Current Accuracy:  0.8193 (136 of 166)  (reward=+10.00 WIN)
+Current Accuracy:  0.8204 (137 of 167)  (reward=+10.00 WIN)
+Current Accuracy:  0.8214 (138 of 168)  (reward=+10.00 WIN)
+Current Accuracy:  0.8225 (139 of 169)  (reward=+10.00 WIN)
+Current Accuracy:  0.8235 (140 of 170)  (reward=+10.00 WIN)
+Current Accuracy:  0.8246 (141 of 171)  (reward=+10.00 WIN)
+Current Accuracy:  0.8256 (142 of 172)  (reward=+10.00 WIN)
+Current Accuracy:  0.8208 (142 of 173)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8218 (143 of 174)  (reward=+10.00 WIN)
+Current Accuracy:  0.8229 (144 of 175)  (reward=+10.00 WIN)
+Current Accuracy:  0.8239 (145 of 176)  (reward=+10.00 WIN)
+Current Accuracy:  0.8249 (146 of 177)  (reward=+10.00 WIN)
+Current Accuracy:  0.8258 (147 of 178)  (reward=+10.00 WIN)
+Current Accuracy:  0.8212 (147 of 179)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8222 (148 of 180)  (reward=+10.00 WIN)
+Current Accuracy:  0.8232 (149 of 181)  (reward=+10.00 WIN)
+Current Accuracy:  0.8242 (150 of 182)  (reward=+10.00 WIN)
+Current Accuracy:  0.8251 (151 of 183)  (reward=+10.00 WIN)
+Current Accuracy:  0.8261 (152 of 184)  (reward=+10.00 WIN)
+Current Accuracy:  0.8270 (153 of 185)  (reward=+10.00 WIN)
+Current Accuracy:  0.8280 (154 of 186)  (reward=+10.00 WIN)
+Current Accuracy:  0.8289 (155 of 187)  (reward=+10.00 WIN)
+Current Accuracy:  0.8298 (156 of 188)  (reward=+10.00 WIN)
+Current Accuracy:  0.8307 (157 of 189)  (reward=+10.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.8263 (157 of 190)  (reward=-1.00 LOSS)
+Current Accuracy:  0.8272 (158 of 191)  (reward=+10.00 WIN)
+Current Accuracy:  0.8281 (159 of 192)  (reward=+10.00 WIN)
+Current Accuracy:  0.8290 (160 of 193)  (reward=+10.00 WIN)
+Current Accuracy:  0.8247 (160 of 194)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8256 (161 of 195)  (reward=+10.00 WIN)
+Current Accuracy:  0.8265 (162 of 196)  (reward=+10.00 WIN)
+Current Accuracy:  0.8223 (162 of 197)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8232 (163 of 198)  (reward=+10.00 WIN)
+Current Accuracy:  0.8241 (164 of 199)  (reward=+10.00 WIN)
+Current Accuracy:  0.8250 (165 of 200)  (reward=+10.00 WIN)
+Current Accuracy:  0.8259 (166 of 201)  (reward=+10.00 WIN)
+Current Accuracy:  0.8267 (167 of 202)  (reward=+10.00 WIN)
+Current Accuracy:  0.8276 (168 of 203)  (reward=+10.00 WIN)
+Current Accuracy:  0.8235 (168 of 204)  (reward=-20.00 LOSS)
+Current Accuracy:  0.8244 (169 of 205)  (reward=+10.00 WIN)
+Current Accuracy:  0.8252 (170 of 206)  (reward=+10.00 WIN)
+Current Accuracy:  0.8261 (171 of 207)  (reward=+10.00 WIN)
+Current Accuracy:  0.8269 (172 of 208)  (reward=+10.00 WIN)
+Current Accuracy:  0.8278 (173 of 209)  (reward=+10.00 WIN)
+Current Accuracy:  0.8286 (174 of 210)  (reward=+10.00 WIN) <----------------------------- Goal END
+Current Accuracy:  0.8294 (175 of 211)  (reward=+10.00 WIN)
+Current Accuracy:  0.8302 (176 of 212)  (reward=+10.00 WIN)
+Current Accuracy:  0.8310 (177 of 213)  (reward=+10.00 WIN)
+Current Accuracy:  0.8318 (178 of 214)  (reward=+10.00 WIN)
+
